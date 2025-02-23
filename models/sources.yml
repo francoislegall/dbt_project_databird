@@ -7,12 +7,12 @@ sources:
       - name: events_20210131
       
   - name: google_sheets
-    schema: google_sheets
+    schema: module2
     tables:
       - name: account_manager_region_mapping
 
   - name: sales_database
-    schema: sales_database
+    schema: filrouge
     tables:
       - name: feedback
       - name: payment
