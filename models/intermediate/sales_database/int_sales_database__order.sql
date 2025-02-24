@@ -6,7 +6,6 @@ select order_id,
     order_created_at,
     order_approved_at,
     sum(total_order_item_amount) as total_order_amount,
-    sum(item_quantity) as total_items,
     count(distinct product_id) as total_distinct_items
 from {{ ref('int_sales_database__order_item') }}
 group by order_id,
