@@ -34,7 +34,6 @@ select oi.order_id,
     coalesce(f.sum_feedback_score,0) as sum_feedback_score,
     coalesce(f.total_feedbacks,0) as total_feedbacks,
     coalesce(oi.total_order_amount,0) as total_order_amount,
-    coalesce(oi.total_items,0) as total_items,
     coalesce(oi.total_distinct_items,0) as total_distinct_items
 from order_item_grouped_by_order as oi 
 left join feedback_grouped_by_order as f on f.order_id = oi.order_id
