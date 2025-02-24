@@ -7,5 +7,5 @@ user_id,
 product_id
 QUALIFY ROW_NUMBER() OVER (
   PARTITION BY user_id
-  ORDER BY SUM(item_quantity) DESC
+  ORDER BY SUM(total_order_item_amount) DESC
 ) = 1
